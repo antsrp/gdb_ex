@@ -14,6 +14,7 @@ import (
 	"github.com/antsrp/gdb_ex/internal/usecases/database/postgres"
 	"github.com/antsrp/gdb_ex/internal/usecases/service"
 	idb "github.com/antsrp/gdb_ex/pkg/infrastructure/db"
+	_ "github.com/google/subcommands"
 	"github.com/google/wire"
 )
 

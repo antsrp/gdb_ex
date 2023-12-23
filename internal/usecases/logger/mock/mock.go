@@ -1,6 +1,8 @@
 package mock
 
 import (
+	"log"
+
 	ilogger "github.com/antsrp/gdb_ex/internal/interfaces/logger"
 )
 
@@ -18,6 +20,7 @@ func (l logger) Info(template string, args ...interface{}) {
 func (l logger) Error(template string, args ...interface{}) {
 }
 func (l logger) Fatal(template string, args ...interface{}) {
+	log.Fatalf(template, args...)
 }
 func (l logger) Debug(template string, args ...interface{}) {
 }
