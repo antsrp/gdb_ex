@@ -1,7 +1,9 @@
 package goose_test
 
 import (
+	"fmt"
 	"log"
+	"os"
 	"testing"
 
 	source "github.com/antsrp/gdb_ex"
@@ -21,6 +23,11 @@ func TestMain(m *testing.M) {
 	if err != nil {
 		log.Fatal(err)
 	}
+	path, err := os.Getwd()
+	if err != nil {
+		log.Println(err)
+	}
+	fmt.Printf("path: %v\n", path)
 
 	settings, err := injections.BuildConnectionSettings("DB", "test.env")
 	if err != nil {
